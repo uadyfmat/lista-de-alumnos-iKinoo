@@ -1,25 +1,22 @@
-/* TODO
-    - separar en alumno.h y lista.h
-*/
-
 #ifndef ALUMNO_H
 #define ALUMNO_H
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
 class Alumno
 {
 private:
-    int creditosAprovados;
+    int creditosAprobados;
     int semestreEquivalente;
     string nombreCompleto;
 
 public:
     // constructor
-    Alumno(string _nombreCompleto, int _creditosAprovados, int _semestreEquivalente);
+    Alumno(string _nombreCompleto, int _creditosAprobados, int _semestreEquivalente);
     // destructor
     ~Alumno();
     /* getters */
@@ -29,10 +26,10 @@ public:
     /* fin getters */
     /* setters */
     void establecerNombreCompleto(string _nombreCompleto);
-    void establecerCreditosAprovados(int _creditosAprovados);
+    void establecercreditosAprobados(int _creditosAprobados);
     void establecerSemestreEquivalente(int _semestreEquivalente);
     /* fin setters */
-    void mostrarDatos();
+    void mostrarDatos(string enLista = "");
 };
 
 #endif

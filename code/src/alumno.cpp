@@ -1,18 +1,17 @@
 #include "alumno.h"
 
 // constructor
-Alumno::Alumno(string _nombreCompleto, int _creditosAprovados, int _semestreEquivalente)
+Alumno::Alumno(string _nombreCompleto, int _creditosAprobados, int _semestreEquivalente)
 {
 
     nombreCompleto = _nombreCompleto;
-    creditosAprovados = _creditosAprovados;
+    creditosAprobados = _creditosAprobados;
     semestreEquivalente = _semestreEquivalente;
     cout << "Se creado un alumno en la dirección " << this << endl;
 }
 // destructor
 Alumno::~Alumno()
 {
-
 }
 
 /* getters */
@@ -22,7 +21,7 @@ string Alumno::obtenerNombreCompleto()
 }
 int Alumno::obtenerCreditosAprobados()
 {
-    return creditosAprovados;
+    return creditosAprobados;
 }
 int Alumno::obtenerSemestreEquivalente()
 {
@@ -34,9 +33,9 @@ void Alumno::establecerNombreCompleto(string _nombreCompleto)
 {
     nombreCompleto = _nombreCompleto;
 }
-void Alumno::establecerCreditosAprovados(int _creditosAprovados)
+void Alumno::establecercreditosAprobados(int _creditosAprobados)
 {
-    creditosAprovados = _creditosAprovados;
+    creditosAprobados = _creditosAprobados;
 }
 void Alumno::establecerSemestreEquivalente(int _semestreEquivalente)
 {
@@ -44,9 +43,17 @@ void Alumno::establecerSemestreEquivalente(int _semestreEquivalente)
 }
 /* fin setters */
 
-void Alumno::mostrarDatos()
+void Alumno::mostrarDatos(string enLista)
 {
-    cout << "Nombre: " << nombreCompleto << endl;
-    cout << "Creditos Aprovados: " << creditosAprovados << endl;
-    cout << "Semestre Equivalente: " << semestreEquivalente << endl;
+    if (enLista == "")
+    {
+        cout << left << setw(30) << "Nombre Completo";
+        cout << right << setw(20) << "Creditos Aprobados";
+        cout << right << setw(30) << "Semestre Equivalente" << endl;
+    }
+
+    cout << left << setw(30) << this->nombreCompleto;
+    cout << right << setw(20) << this->creditosAprobados;
+    cout << right << setw(30) << this->semestreEquivalente << endl;
 }
+

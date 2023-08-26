@@ -77,14 +77,14 @@ void ListaAlumno::imprimir()
 {
     Nodo *nodoActual = this->cabeza;
 
-    cout << "Nombre\t\t\tCreditos Aprobados\tSemestre Equivalente" << endl;
+    cout << left << setw(30) << "Nombre Completo";
+    cout << right << setw(20) << "Creditos Aprobados";
+    cout << right << setw(30) << "Semestre Equivalente" << endl;
     while (nodoActual != nullptr)
     {
         Alumno *alumnoActual = nodoActual->obtenerAlumno();
 
-        cout << alumnoActual->obtenerNombreCompleto() << "\t\t";
-        cout << alumnoActual->obtenerCreditosAprovados() << "\t\t\t";
-        cout << alumnoActual->obtenerSemestreEquivalente() << endl;
+        alumnoActual->mostrarDatos("enLista");
 
         nodoActual = nodoActual->obtenerNodoSiguiente();
     }
@@ -92,7 +92,7 @@ void ListaAlumno::imprimir()
 // función de apoyo para el recorrido y posterior insersecion
 bool condicionInsercion(Nodo *nodoActual, Nodo *nodoNuevo)
 {
-    return (nodoActual != nullptr && (nodoNuevo->obtenerAlumno()->obtenerCreditosAprovados() < nodoActual->obtenerAlumno()->obtenerCreditosAprovados()));
+    return (nodoActual != nullptr && (nodoNuevo->obtenerAlumno()->obtenerCreditosAprobados() < nodoActual->obtenerAlumno()->obtenerCreditosAprobados()));
 }
 
 void ListaAlumno::insertarOrdenadoCreditos(Nodo *nodoNuevo)
