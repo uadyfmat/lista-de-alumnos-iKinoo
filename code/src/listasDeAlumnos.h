@@ -43,6 +43,8 @@ public:
     /* fin getters */
     bool listaEstaVacia();
     void insertarAlInicio(Nodo *nodoNuevo);
+    void imprimir();
+    void insertarOrdenadoCreditos(Nodo *nodoNuevo);
 };
 
 #endif

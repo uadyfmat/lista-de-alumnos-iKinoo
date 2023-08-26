@@ -24,7 +24,7 @@ public:
     ~Alumno();
     /* getters */
     string obtenerNombreCompleto();
-    int obtenerCreditosAprovados();
+    int obtenerCreditosAprobados();
     int obtenerSemestreEquivalente();
     /* fin getters */
     /* setters */

@@ -20,7 +20,7 @@ string Alumno::obtenerNombreCompleto()
 {
     return nombreCompleto;
 }
-int Alumno::obtenerCreditosAprovados()
+int Alumno::obtenerCreditosAprobados()
 {
     return creditosAprovados;
 }
