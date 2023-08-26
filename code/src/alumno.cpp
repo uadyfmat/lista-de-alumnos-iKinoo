@@ -1,37 +1,52 @@
 #include "alumno.h"
 
-AlumnoPtr crearAlumno(string nombreCompleto, int creditosAprobados, int semestreEquivalente)
+// constructor
+Alumno::Alumno(string _nombreCompleto, int _creditosAprovados, int _semestreEquivalente)
 {
-    AlumnoPtr alumnoNuevo = new Alumno;
 
-    alumnoNuevo->nombreCompleto = nombreCompleto;
-    alumnoNuevo->creditosAprobados = creditosAprobados;
-    alumnoNuevo->semestreEquivalente = semestreEquivalente;
+    nombreCompleto = _nombreCompleto;
+    creditosAprovados = _creditosAprovados;
+    semestreEquivalente = _semestreEquivalente;
+    cout << "Se creado un alumno en la dirección " << this << endl;
+}
+// destructor
+Alumno::~Alumno()
+{
 
-    return alumnoNuevo;
 }
 
-NodoPtr crearNodo(AlumnoPtr alumno)
+/* getters */
+string Alumno::obtenerNombreCompleto()
 {
-    NodoPtr nodoNuevo = new Nodo;
-
-    nodoNuevo->alumno = alumno;
-
-    nodoNuevo->nodoSiguiente = nullptr;
-
-    return nodoNuevo;
+    return nombreCompleto;
 }
-ListaPtr crearLista()
+int Alumno::obtenerCreditosAprovados()
 {
-    ListaPtr listaNueva = new Lista;
-
-    listaNueva->cabeza = nullptr;
-    return listaNueva;
+    return creditosAprovados;
 }
-
-void imprmirAlumno(AlumnoPtr alumno)
+int Alumno::obtenerSemestreEquivalente()
 {
-    cout << "Nombre: " << alumno->nombreCompleto << endl;
-    cout << "Creditos aprovados: " << alumno->creditosAprobados << endl;
-    cout << "Semestre equivalente: " << alumno->semestreEquivalente << endl;
+    return semestreEquivalente;
+}
+/* fin getters */
+/* setters */
+void Alumno::establecerNombreCompleto(string _nombreCompleto)
+{
+    nombreCompleto = _nombreCompleto;
+}
+void Alumno::establecerCreditosAprovados(int _creditosAprovados)
+{
+    creditosAprovados = _creditosAprovados;
+}
+void Alumno::establecerSemestreEquivalente(int _semestreEquivalente)
+{
+    semestreEquivalente = _semestreEquivalente;
+}
+/* fin setters */
+
+void Alumno::mostrarDatos()
+{
+    cout << "Nombre: " << nombreCompleto << endl;
+    cout << "Creditos Aprovados: " << creditosAprovados << endl;
+    cout << "Semestre Equivalente: " << semestreEquivalente << endl;
 }

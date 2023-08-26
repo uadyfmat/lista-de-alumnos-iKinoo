@@ -10,32 +10,29 @@
 
 using namespace std;
 
-typedef struct Alumno
+class Alumno
 {
-    string nombreCompleto;
-    int creditosAprobados;
+private:
+    int creditosAprovados;
     int semestreEquivalente;
-} Alumno;
-typedef Alumno *AlumnoPtr;
+    string nombreCompleto;
 
-typedef struct Nodo
-{
-    AlumnoPtr alumno;
-    struct Nodo *nodoSiguiente;
+public:
+    // constructor
+    Alumno(string _nombreCompleto, int _creditosAprovados, int _semestreEquivalente);
+    // destructor
+    ~Alumno();
+    /* getters */
+    string obtenerNombreCompleto();
+    int obtenerCreditosAprovados();
+    int obtenerSemestreEquivalente();
+    /* fin getters */
+    /* setters */
+    void establecerNombreCompleto(string _nombreCompleto);
+    void establecerCreditosAprovados(int _creditosAprovados);
+    void establecerSemestreEquivalente(int _semestreEquivalente);
+    /* fin setters */
+    void mostrarDatos();
+};
 
-} Nodo;
-typedef Nodo *NodoPtr;
-
-typedef struct Lista
-{
-    NodoPtr cabeza;
-} Lista;
-typedef Lista *ListaPtr;
-
-// prototipos de funciones
-
-AlumnoPtr crearAlumno(string nombreCompleto, int creditosAprobados, int semestreEquivalente);
-NodoPtr crearNodo(AlumnoPtr alumno);
-ListaPtr crearLista();
-void imprmirAlumno(AlumnoPtr alumno);
 #endif

@@ -2,15 +2,17 @@
 #include <string>
 
 #include "alumno.h"
+#include "listasDeAlumnos.h"
 
 using namespace std;
 
 int main()
 {
-    ListaPtr lista = crearLista();
-    AlumnoPtr alumno1 = crearAlumno("Rodrigo Pacab", 18, 3);
-    imprmirAlumno(alumno1);
-    NodoPtr nodo = crearNodo(alumno1);
+    ListaAlumno *lista = new ListaAlumno();
+    Alumno *alumno = new Alumno("Bartolomeo Ortiz", 18, 3);
+    Nodo *nodo = new Nodo(alumno);
+
+    lista->insertarAlInicio(nodo);
 
     return 0;
 }
