@@ -1,9 +1,17 @@
+
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/4TBp-IWb)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=11625060&assignment_repo_type=AssignmentRepo)
 # Ejercicio de Práctica-PD
+
+> :student: Alumno:   **Rodrigo Joaquín Pacab Canul**
+
 #  Lista de Alumnos.
 
-## Instrucciones:
+<details>
+ <summary> <h2> Instrucciones:</h2> </summary>
+
+ ##
 
 Considera la siguiente Estructura de Datos **Alumno** que contiene los datos:
 ```c++
@@ -57,3 +65,12 @@ No se espera que la funcionalidad este completa durante la sesión pero es requi
 ![Evidencia](assets/EvidenciaTerminal.png)
 
 > Written with [StackEdit](https://stackedit.io/).
+
+</details>
+
+## Ejecución
+
+![alt](assets/vscode_running.png)
+
+
+![alt](assets/vscode_terminal_runnig.png)

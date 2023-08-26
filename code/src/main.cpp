@@ -21,11 +21,11 @@ int main()
     Nodo *nodo4;
     Nodo *nodo5;
 
-    alumno1 = new Alumno("Yoda", 400, 9);
-    alumno2 = new Alumno("Obi-Wan Kenobi", 345, 7);
-    alumno3 = new Alumno("Ahsaka Tano", 300, 5);
-    alumno4 = new Alumno("Luke Skywalker", 245, 3);
-    alumno5 = new Alumno("Grogu", 100, 1);
+    alumno2 = new Alumno("Jose Jose", 115, 7);
+    alumno1 = new Alumno("Carlos Matias", 502, 9);
+    alumno3 = new Alumno("Naruto Uzumaki", 245, 5);
+    alumno4 = new Alumno("Armando Manzanero", 300, 3);
+    alumno5 = new Alumno("Jain Galice", 100, 1);
 
     nodo1 = new Nodo(alumno1);
     nodo2 = new Nodo(alumno2);
@@ -38,7 +38,7 @@ int main()
     lista->insertarOrdenadoCreditos(nodo3);
     lista->insertarOrdenadoCreditos(nodo4);
     lista->insertarOrdenadoCreditos(nodo5);
-
+    cout << "Imprimiendo por orden descendente (créditos aprobados)" << endl;
     lista->imprimir();
 
     return 0;
