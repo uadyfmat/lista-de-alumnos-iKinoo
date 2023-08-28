@@ -41,5 +41,11 @@ int main()
     cout << "Imprimiendo por orden descendente (créditos aprobados)" << endl;
     lista->imprimir();
 
+    delete nodo1;
+    delete nodo2;
+    delete nodo3;
+    delete nodo4;
+    delete nodo5;
+
     return 0;
 }

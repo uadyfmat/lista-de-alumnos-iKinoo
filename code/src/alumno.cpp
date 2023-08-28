@@ -56,4 +56,3 @@ void Alumno::mostrarDatos(string enLista)
     cout << right << setw(20) << this->creditosAprobados;
     cout << right << setw(30) << this->semestreEquivalente << endl;
 }
-

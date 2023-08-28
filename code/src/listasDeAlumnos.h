@@ -46,5 +46,4 @@ public:
     void imprimir();
     void insertarOrdenadoCreditos(Nodo *nodoNuevo);
 };
-
 #endif

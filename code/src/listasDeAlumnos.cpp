@@ -14,6 +14,8 @@ Nodo::Nodo(Alumno *alumno)
 // destructor
 Nodo::~Nodo()
 {
+    delete this->alumno;
+    this->alumno = nullptr;
 }
 /* setters */
 void Nodo::establecerAlumno(Alumno *alumno)
