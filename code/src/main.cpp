@@ -47,5 +47,7 @@ int main()
     delete nodo4;
     delete nodo5;
 
+    delete lista;
+
     return 0;
 }
